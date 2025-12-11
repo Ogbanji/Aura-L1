@@ -217,7 +217,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **GitHub**: [https://github.com/aura-l1/aura](https://github.com/aura-l1/aura)
 - **Discord**: [https://discord.gg/aura-l1](https://discord.gg/aura-l1)
 - **Twitter**: [@AuraL1](https://twitter.com/AuraL1)
-- **Email**: team@aura-l1.io
+- **Email**: auralayer1@gmail.com
 
 ## 🙏 Acknowledgments
 
@@ -244,3 +244,4 @@ See [docs/roadmap.md](docs/roadmap.md) for detailed timeline.
 **Built with ❤️ for the decentralized future**
 
 *For detailed technical documentation, see the [docs](docs/) directory.*
+
