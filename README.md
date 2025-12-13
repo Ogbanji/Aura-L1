@@ -1,42 +1,42 @@
-# AURA-L1: Privacy-First Avalanche Subnet Framework
+# AURA-L1: Privacy-Preserving Avalanche Subnet Framework
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Build Status](https://github.com/aura-l1/aura-l1/actions/workflows/ci.yml/badge.svg)](https://github.com/aura-l1/aura-l1/actions/workflows/ci.yml)
 [![Rust](https://img.shields.io/badge/rust-1.75%2B-orange.svg)](https://www.rust-lang.org)
 [![TypeScript](https://img.shields.io/badge/typescript-5.0%2B-blue.svg)](https://www.typescriptlang.org/)
 
 ## 🚀 Overview
 
-**AURA-L1** is a next-generation, privacy-first, high-performance Layer-1 blockchain framework designed to deploy seamlessly as an **Avalanche Subnet**.
+**AURA-L1** is a high-performance, privacy-first Layer-1 blockchain framework designed to operate as a sovereign **Avalanche Subnet**.
 
-Unlike traditional EVM subnets that expose all data publicly, AURA-L1 integrates **native zero-knowledge (ZK) privacy primitives** and **encrypted state pools** directly into the runtime. This allows for:
-- **Confidential Transactions**: Transfer assets without revealing amounts or sender/receiver relationships.
-- **Stealth Addressing**: Native support for one-time addresses to preserve identity.
-- **High Throughput**: Optimized Rust-based runtime utilizing Avalanche's consensus engine for sub-second finality.
+Unlike traditional EVM-based subnets, AURA-L1 leverages a custom **Rust Runtime** optimized for zero-knowledge (ZK) primitives and encrypted state transitions. It enables compliant, confidential asset transfers and decentralized applications (dApps) without sacrificing the speed or security of the Avalanche consensus engine.
 
-AURA-L1 is not just a chain; it is a **framework** for communities to launch their own privacy-preserving, sovereign economies on the Avalanche network.
+### Core Value Proposition
+- **Native Privacy**: Transactions are encrypted by default using ZK-SNARKs (Plonk) and Stealth Addressing (Elliptic Curve functionality).
+- **Subnet Performance**: Inherits sub-second finality and infinite scalability from the Avalanche Snowman consensus protocol.
+- **Sovereign Governance**: Built-in on-chain governance allows the community to manage validator sets and protocol parameters.
 
 ## 🌟 Key Features
 
-*   **Privacy-First Architecture**: Built from the ground up with encrypted mempools and ZK-proof verification.
-*   **Avalanche Subnet Native**: Designed to run as a custom VM (Virtual Machine) on Avalanche, inheriting its consensus speed and validator infrastructure.
-*   **Rust Runtime**: High-performance execution engine, free from legacy EVM overhead.
-*   **Governance-Driven**: Built-in on-chain governance for parameter updates and validator set management.
-*   **Developer Friendly**: Full TypeScript CLI and SDK for node management and transaction dispatch.
+*   **Encrypted State Pools**: Account balances and transaction history are shielded from public view using homomorphic encryption techniques.
+*   **Stealth Addressing**: Automatically generates one-time addresses for every transaction, breaking the link between sender and receiver.
+*   **Rust-Based Runtime**: A clean-slate execution environment free from legacy EVM overhead, maximizing throughput and reducing state bloat.
+*   **Compliance Hooks**: Optional view keys allow users to reveal transaction history to auditors or regulators selectively.
+*   **Developer CLI**: A comprehensive TypeScript CLI for node operation, key management, and transaction dispatch.
 
 ## 📂 Repository Structure
 
 ```text
 aura-l1/
-├── runtime/      # Core blockchain state transition logic (Rust)
-├── consensus/    # Consensus adapter and committee management (Rust)
-├── crypto/       # Cryptographic primitives (ZK, Stealth, Encryption) (Rust)
-├── mempool/      # Encrypted transaction pool (Rust)
-├── governance/   # On-chain governance and validator logic (Rust)
-├── cli/          # Developer and User CLI (TypeScript)
-├── subnet/       # Avalanche VM integration stubs
-├── docs/         # Detailed architectural documentation
-└── tests/        # Integration tests and scenarios
+├── runtime/      # Core state transition logic and WASM execution environment (Rust)
+├── consensus/    # Snowman consensus engine adapter (Rust)
+├── crypto/       # ZK proofs, Schnorr signatures, and Homomorphic Encryption (Rust)
+├── mempool/      # Encrypted transaction gossip and ordering (Rust)
+├── governance/   # On-chain proposal and voting mechanisms (Rust)
+├── cli/          # Developer CLI and SDK (TypeScript)
+├── subnet/       # AvalancheGo plugin definitions and VM specs
+├── docs/         # Architectural specifications and protocol design
+└── tests/        # End-to-end integration scenarios
 ```
 
 ## 🛠️ Installation & Quick Start
@@ -44,54 +44,66 @@ aura-l1/
 ### Prerequisites
 - **Rust**: `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
 - **Node.js**: v18+ & **pnpm** or **npm**
-- **AvalancheGo**: (Optional, for local subnet testing)
+- **AvalancheGo**: (Optional, for local network simulation)
 
-### Build the Project
+### 1. Build the Rust Runtime
 ```bash
-# Build Rust Crates
 cargo build --release
+```
 
-# Install CLI
+### 2. Install the CLI
+```bash
 cd cli
 npm install
 npm run build
 npm link
 ```
 
-## 🎮 Demo
+## 🎮 Usage Guide
 
-**1. Initialize the Chain**
+**1. Initialize a Local Chain**
+Create a new genesis configuration and validator set.
 ```bash
-aura init --network local
+aura init --network local --chain-id 9999
 ```
 
-**2. Start a Local Node**
+**2. Start the Node**
+Launch the local daemon to begin producing blocks.
 ```bash
 aura node:start
 ```
 
-**3. Send a Secure Transaction**
+**3. Inspect Chain Status**
+View the current height, active validators, and network information.
 ```bash
-aura tx:send --to <STEALTH_ADDR> --amount 100 --privacy high
+aura chain:info
+```
+
+**4. Send a Private Transaction**
+Dispatch a transaction with privacy protections enabled.
+```bash
+# Sends 100 AURA using a stealth address derivation
+aura tx:send --to <RECIPIENT_PUBKEY> --amount 100 --privacy max
 ```
 
 ## 📜 Documentation
 
-Detailed documentation is available in the `/docs` directory:
-- [Architecture Overview](docs/architecture.md)
-- [Consensus Mechanism](docs/consensus.md)
-- [Privacy System](docs/privacy.md)
-- [Developer Quickstart](docs/developer_quickstart.md)
+Detailed technical specifications can be found in the `/docs` directory:
 
-## ✅ Submission Checklist
+- [**Architecture Overview**](docs/architecture.md): System components and data flow.
+- [**Consensus Mechanism**](docs/consensus.md): Adaptation of the Snowman consensus protocol.
+- [**Privacy Primitives**](docs/privacy.md): Deep dive into ZK-SNARKs and Stealth Addresses.
+- [**Governance Model**](docs/governance.md): Proposal lifecycles and voting logic.
+- [**Roadmap**](docs/roadmap.md): Future development milestones.
 
-- [x] Runtime Architecture (State, Blocks, Tx)
-- [x] Consensus Rotation Logic (Mock PoS)
-- [x] Cryptographic Primitives (Encryption, ZK Stubs)
-- [x] Encrypted Mempool
-- [x] Governance Module
-- [x] TypeScript CLI
-- [x] Documentation & Roadmaps
+## ✅ Development Status
+
+- [x] **Runtime**: Basic State Transition & Block Execution
+- [x] **Crypto**: Schnorr Signatures & Stealth Address Generation
+- [x] **Consensus**: Mock Consensus Rotation (Snowman Integration in progress)
+- [x] **CLI**: Full Node Management & Transaction Dispatch
+- [x] **Mempool**: Naive FIFO Ordering (Priority Queue pending)
+- [ ] **ZK Circuits**: Trusted Setup & Prover Integration (Phase 2)
 
 ## 📄 License
 
