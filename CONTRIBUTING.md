@@ -213,7 +213,7 @@ fn test_end_to_end() {
 
 - **Discord**: https://discord.gg/aura-l1
 - **GitHub Discussions**: https://github.com/aura-l1/aura/discussions
-- **Email**: dev@aura-l1.io
+- **Email**: auralayer1@gmail.com
 
 ## License
 

@@ -1,0 +1,21 @@
+    Checking getrandom v0.3.4
+    Checking fastrand v2.3.0
+    Checking ppv-lite86 v0.2.21
+    Checking num-traits v0.2.19
+    Checking rand_core v0.9.3
+    Checking tempfile v3.23.0
+    Checking quick-error v1.2.3
+    Checking fnv v1.0.7
+    Checking bit-vec v0.8.0
+    Checking wait-timeout v0.2.1
+    Checking rand_chacha v0.9.0
+    Checking rusty-fork v0.3.1
+    Checking bit-set v0.8.0
+    Checking rand v0.9.2
+    Checking rand_xorshift v0.4.0
+    Checking unarray v0.1.4
+    Checking regex-syntax v0.8.8
+    Checking chrono v0.4.42
+    Checking proptest v1.9.0
+    Checking aura-runtime v0.1.0 (C:\Users\acer\Desktop\AURA L1\runtime)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 26.26s

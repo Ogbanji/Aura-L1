@@ -1,55 +1,19 @@
 # Rust
 target/
-Cargo.lock
 **/*.rs.bk
-*.pdb
+Cargo.lock
 
-# Node.js
+# Node
 node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.npm
-.eslintcache
-*.tsbuildinfo
-
-# CLI dist
+dist/
 cli/dist/
+cli/node_modules/
 
-# Data directories
-data/
-.aura/
-*.db
-*.sled
+# OS
+.DS_Store
+Thumbs.db
 
 # IDE
 .vscode/
 .idea/
 *.swp
-*.swo
-*~
-.DS_Store
-
-# Build artifacts
-*.zip
-*.tar.gz
-package/
-artifacts/
-
-# Logs
-*.log
-logs/
-
-# Environment
-.env
-.env.local
-.env.*.local
-
-# OS
-Thumbs.db
-.DS_Store
-
-# Temporary files
-tmp/
-temp/
-*.tmp

@@ -364,7 +364,7 @@ Quorum Check (10%) → Approval (50%+) → Execute
 
 - **GitHub**: https://github.com/aura-l1/aura
 - **Discord**: https://discord.gg/aura-l1
-- **Email**: team@aura-l1.io
+- **Email**: auralayer1@gmail.com
 - **Docs**: https://docs.aura-l1.io
 
 ---

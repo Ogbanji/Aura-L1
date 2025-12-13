@@ -429,7 +429,7 @@ aura tx:send --to 0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb0 --amount 100
 - **GitHub**: https://github.com/aura-l1/aura
 - **Discord**: https://discord.gg/aura-l1
 - **Twitter**: [@AuraL1](https://twitter.com/AuraL1)
-- **Email**: team@aura-l1.io
+- **Email**: auralayer1@gmail.com
 - **Website**: https://aura-l1.io
 
 ## Acknowledgments
