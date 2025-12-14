@@ -1,44 +1,91 @@
 # Consensus Overview
 
-AURA-L1 implements a modular Proof-of-Stake (PoS) consensus model
-designed for high throughput, predictable finality, and community ownership.
+AURA-L1 uses a modular Proof-of-Stake (PoS) consensus framework designed to
+support predictable block finality, validator accountability, and future
+upgradability.
 
-The consensus layer is intentionally designed as a replaceable module,
-allowing future upgrades without disrupting the execution or state layers.
+The consensus layer is intentionally isolated from the execution and state
+layers, allowing alternative consensus mechanisms or upgraded implementations
+to be introduced without breaking core protocol logic.
+
+---
 
 ## Design Goals
-- Fast block finality
-- Deterministic leader rotation
-- Validator accountability
-- Simple and auditable logic
+
+- Fast and predictable block confirmation
+- Deterministic leader and committee rotation
+- Validator accountability through governance controls
+- Simple, auditable, and modular consensus logic
+
+---
 
 ## Validator Set
-Validators are registered through the governance module.
-Each validator stakes a minimum amount defined by chain parameters.
+
+Validators are registered and managed through the on-chain governance module.
+Each validator is required to stake a minimum amount defined by configurable
+chain parameters.
+
+The active validator set may change over time based on governance decisions and
+stake requirements.
+
+---
 
 ## Committee Selection
-- Validators are grouped into rotating committees
-- Committees are selected based on stake-weighted randomness
-- Rotation occurs at fixed epoch boundaries
+
+Consensus participation is organized into rotating committees:
+
+- Validators are grouped into committees on an epoch basis
+- Committee selection is based on stake-weighted randomness
+- Rotation occurs at fixed epoch boundaries to limit long-term leader dominance
+
+This structure is intended to balance decentralization with predictable
+performance.
+
+---
 
 ## Block Proposal Flow
-1. Leader is selected for the current slot
-2. Leader proposes a block
-3. Committee members validate the block
-4. Votes are collected
-5. Block is finalized upon quorum
 
-## Finality
-Finality is achieved once a supermajority of the committee
-signs the block. Finalized blocks cannot be reverted.
+At a high level, block production follows this flow:
+
+1. A leader is selected for the current slot
+2. The leader proposes a block
+3. Committee members validate the proposed block
+4. Votes are collected from participating validators
+5. A block is considered accepted once quorum conditions are met
+
+The exact quorum rules and vote aggregation logic are defined by the active
+consensus configuration.
+
+---
+
+## Finality Model
+
+The current design assumes a committee-based finality model where blocks become
+final once a supermajority of the active committee agrees on the block.
+
+This finality model is implemented as part of the consensus framework and may be
+refined or replaced as the protocol evolves.
+
+---
 
 ## Slashing (Planned)
-The current implementation includes a slashing interface.
-Future versions will penalize:
+
+The consensus module exposes a slashing interface for handling validator
+misbehavior. Future implementations may include penalties for:
+
 - Double signing
 - Invalid block proposals
-- Extended downtime
+- Extended validator downtime
+
+Specific slashing conditions and penalties are subject to governance approval.
+
+---
 
 ## Upgrade Path
-Consensus rules are governed by on-chain governance and
-can be upgraded through approved proposals.
+
+Consensus rules are governed by on-chain governance and may be upgraded through
+approved proposals.
+
+This allows AURA-L1 to adopt improved consensus mechanisms, including tighter
+integration with Avalanche’s Snowman consensus, without requiring a full
+protocol reset.
