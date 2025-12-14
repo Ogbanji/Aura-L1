@@ -1,4 +1,4 @@
-# AURA-L1: Privacy-Preserving Avalanche Subnet Framework
+# AURA-L1: A Privacy-Focused Avalanche Subnet Framework
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Build Status](https://github.com/aura-l1/aura-l1/actions/workflows/ci.yml/badge.svg)](https://github.com/aura-l1/aura-l1/actions/workflows/ci.yml)
@@ -7,9 +7,16 @@
 
 ## 🚀 Overview
 
-**AURA-L1** is a high-performance, privacy-first Layer-1 blockchain framework designed to operate as a sovereign **Avalanche Subnet**.
+**AURA-L1** AURA-L1 is a privacy-focused Layer-1 blockchain framework designed to operate
+as a sovereign Avalanche Subnet.
 
-Unlike traditional EVM-based subnets, AURA-L1 leverages a custom **Rust Runtime** optimized for zero-knowledge (ZK) primitives and encrypted state transitions. It enables compliant, confidential asset transfers and decentralized applications (dApps) without sacrificing the speed or security of the Avalanche consensus engine.
+Unlike traditional EVM-based subnets, AURA-L1 explores a custom Rust-based
+execution runtime with support for encrypted transaction flows and
+privacy-oriented primitives.
+
+The project focuses on modular design, allowing privacy, governance,
+and execution components to evolve independently while remaining compatible
+with the Avalanche ecosystem.
 
 ### Core Value Proposition
 - **Native Privacy**: Transactions are encrypted by default using ZK-SNARKs (Plonk) and Stealth Addressing (Elliptic Curve functionality).
@@ -108,3 +115,4 @@ Detailed technical specifications can be found in the `/docs` directory:
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
