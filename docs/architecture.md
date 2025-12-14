@@ -7,9 +7,15 @@ The architecture separates core concerns into distinct, interoperable components
 ⸻
 
 Core Components
+
 	•	Runtime – executes transactions and smart contracts securely and efficiently
+	
 	•	Consensus – manages block proposal, validation, and finality using a modular PoS framework
+	
 	•	Crypto – handles cryptographic operations including signatures, hashing, and key management
+	
 	•	Mempool – organizes pending transactions and ensures efficient propagation to validators
+	
 	•	Governance – manages protocol parameters, upgrades, and emergency controls via on-chain DAO mechanisms
+	
 	•	CLI – provides a command-line interface for node operation, monitoring, and administration
