@@ -7,13 +7,13 @@
 
 ## 🚀 Overview
 
-**AURA-L1** AURA-L1 is a privacy-focused Layer-1 blockchain framework designed to operate as a sovereign Avalanche Subnet.
+**AURA-L1** is a privacy-focused Layer-1 blockchain framework designed to operate as a sovereign Avalanche Subnet.
 
 Unlike traditional EVM-based subnets, AURA-L1 explores a custom Rust-based
 execution runtime with support for encrypted transaction flows and
 privacy-oriented primitives.
 
-The project focuses on modular design, allowing privacy, governance,and execution components to evolve independently while remaining compatible
+The project focuses on modular design, allowing privacy, governance, and execution components to evolve independently while remaining compatible
 with the Avalanche ecosystem.
 
 ### Core Value Proposition
@@ -40,7 +40,7 @@ Supports one-time address derivation to reduce linkability between senders and r
 A clean-slate execution environment designed for modular state transition logic.
 
 *   **Governance Interfaces**:
-framework for validator management and parameter updates.
+Framework for validator management and parameter updates.
 
 *   **Developer CLI**:
 TypeScript-based CLI for node interaction and chain inspection.
@@ -51,7 +51,7 @@ TypeScript-based CLI for node interaction and chain inspection.
 aura-l1/
 ├── runtime/      # Core state transition logic and WASM execution environment (Rust)
 ├── consensus/    # Snowman consensus engine adapter (Rust)
-├── crypto/       # Cryptographic primitives, signatures, and privacy interfaces(Rust)
+├── crypto/       # Cryptographic primitives, signatures, and privacy interfaces (Rust)
 ├── mempool/      # Encrypted transaction gossip and ordering (Rust)
 ├── governance/   # On-chain proposal and voting mechanisms (Rust)
 ├── cli/          # Developer CLI and SDK (TypeScript)
@@ -129,6 +129,7 @@ Detailed technical specifications can be found in the `/docs` directory:
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 
 
 
