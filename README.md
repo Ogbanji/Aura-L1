@@ -7,29 +7,43 @@
 
 ## 🚀 Overview
 
-**AURA-L1** AURA-L1 is a privacy-focused Layer-1 blockchain framework designed to operate
-as a sovereign Avalanche Subnet.
+**AURA-L1** AURA-L1 is a privacy-focused Layer-1 blockchain framework designed to operate as a sovereign Avalanche Subnet.
 
 Unlike traditional EVM-based subnets, AURA-L1 explores a custom Rust-based
 execution runtime with support for encrypted transaction flows and
 privacy-oriented primitives.
 
-The project focuses on modular design, allowing privacy, governance,
-and execution components to evolve independently while remaining compatible
+The project focuses on modular design, allowing privacy, governance,and execution components to evolve independently while remaining compatible
 with the Avalanche ecosystem.
 
 ### Core Value Proposition
-- **Native Privacy**: Transactions are encrypted by default using ZK-SNARKs (Plonk) and Stealth Addressing (Elliptic Curve functionality).
-- **Subnet Performance**: Inherits sub-second finality and infinite scalability from the Avalanche Snowman consensus protocol.
-- **Sovereign Governance**: Built-in on-chain governance allows the community to manage validator sets and protocol parameters.
 
+- **Privacy-Oriented Design**:
+The architecture introduces encrypted transaction flows and stealth addressing primitives, with zero-knowledge systems planned as pluggable extensions.
+
+- **Subnet Compatibility**:
+Designed to leverage Avalanche Subnet infrastructure
+and Snowman-style consensus mechanics.
+
+- **Community Governance**:
+Includes an on-chain governance framework for managing validator participation and protocol parameters.
+
+  
 ## 🌟 Key Features
 
-*   **Encrypted State Pools**: Account balances and transaction history are shielded from public view using homomorphic encryption techniques.
-*   **Stealth Addressing**: Automatically generates one-time addresses for every transaction, breaking the link between sender and receiver.
-*   **Rust-Based Runtime**: A clean-slate execution environment free from legacy EVM overhead, maximizing throughput and reducing state bloat.
-*   **Compliance Hooks**: Optional view keys allow users to reveal transaction history to auditors or regulators selectively.
-*   **Developer CLI**: A comprehensive TypeScript CLI for node operation, key management, and transaction dispatch.
+*   **Encrypted Transaction Flow**: Transactions are wrapped and processed through privacy-aware data structures.
+
+*   **Stealth Addressing**:
+supports one-time address derivation to reduce linkability between senders and receivers.
+
+*   **Rust-Based Runtime**:
+A clean-slate execution environment designed for modular state transition logic.
+
+*   **Governance Interfaces**:
+framework for validator management and parameter updates.
+
+*   **Developer CLI**:
+TypeScrip-based CLI for node interaction and chain inspection.
 
 ## 📂 Repository Structure
 
@@ -115,4 +129,5 @@ Detailed technical specifications can be found in the `/docs` directory:
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 
