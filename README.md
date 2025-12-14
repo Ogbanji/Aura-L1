@@ -34,7 +34,7 @@ Includes an on-chain governance framework for managing validator participation a
 *   **Encrypted Transaction Flow**: Transactions are wrapped and processed through privacy-aware data structures.
 
 *   **Stealth Addressing**:
-supports one-time address derivation to reduce linkability between senders and receivers.
+Supports one-time address derivation to reduce linkability between senders and receivers.
 
 *   **Rust-Based Runtime**:
 A clean-slate execution environment designed for modular state transition logic.
@@ -43,7 +43,7 @@ A clean-slate execution environment designed for modular state transition logic.
 framework for validator management and parameter updates.
 
 *   **Developer CLI**:
-TypeScrip-based CLI for node interaction and chain inspection.
+TypeScript-based CLI for node interaction and chain inspection.
 
 ## 📂 Repository Structure
 
@@ -51,7 +51,7 @@ TypeScrip-based CLI for node interaction and chain inspection.
 aura-l1/
 ├── runtime/      # Core state transition logic and WASM execution environment (Rust)
 ├── consensus/    # Snowman consensus engine adapter (Rust)
-├── crypto/       # ZK proofs, Schnorr signatures, and Homomorphic Encryption (Rust)
+├── crypto/       # Cryptographic primitives, signatures, and privacy interfaces(Rust)
 ├── mempool/      # Encrypted transaction gossip and ordering (Rust)
 ├── governance/   # On-chain proposal and voting mechanisms (Rust)
 ├── cli/          # Developer CLI and SDK (TypeScript)
@@ -104,7 +104,7 @@ aura chain:info
 Dispatch a transaction with privacy protections enabled.
 ```bash
 # Sends 100 AURA using a stealth address derivation
-aura tx:send --to <RECIPIENT_PUBKEY> --amount 100 --privacy max
+aura tx:send --to <RECIPIENT_PUBKEY> --amount 100
 ```
 
 ## 📜 Documentation
@@ -129,6 +129,7 @@ Detailed technical specifications can be found in the `/docs` directory:
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 
 
 
